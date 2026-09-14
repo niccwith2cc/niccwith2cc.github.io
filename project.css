@@ -1,0 +1,48 @@
+:root {
+  --ink: #17211f;
+  --muted: #5e706b;
+  --paper: #edf4f1;
+  --cream: #f9fcfa;
+  --green: #cfe8b1;
+  --blue: #8fbcca;
+  --line: #c5d6d1;
+  --sans: 'Newsreader', serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 18px; line-height: 1.55; }
+a { color: inherit; text-decoration: none; }
+.project-shell { max-width: 1200px; margin: 0 auto; padding: 0 5vw; }
+.project-header { height: 92px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.back-link, .project-header a { font-weight: 600; color: #527f91; }
+.brand { color: var(--ink); font-size: 20px; font-weight: 700; }
+.hero { padding: 100px 0 90px; border-bottom: 1px solid var(--line); }
+.eyebrow { font-size: 18px; font-weight: 600; color: var(--muted); margin: 0 0 25px; }
+.hero h1 { font-size: clamp(3.4rem, 8vw, 8rem); line-height: .92; letter-spacing: -.075em; max-width: 980px; margin: 0; }
+.hero h1 em { font-style: normal; color: #527f91; }
+.lede { font-size: 24px; max-width: 760px; margin: 38px 0 0; color: #40504b; }
+.project-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; padding: 90px 0; }
+.project-copy h2 { font-size: clamp(2.3rem, 4vw, 4rem); line-height: .98; letter-spacing: -.065em; margin: 0 0 24px; }
+.project-copy p { max-width: 700px; }
+.project-copy ul { padding-left: 22px; max-width: 700px; }
+.project-copy li { margin: 12px 0; }
+.project-meta { border-top: 1px solid var(--line); align-self: start; }
+.meta-row { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.meta-label { display: block; font-size: 15px; font-weight: 600; color: var(--muted); margin-bottom: 5px; }
+.meta-value { font-size: 20px; font-weight: 600; }
+.result { background: var(--ink); color: var(--cream); padding: 55px 6vw; margin: 0 0 90px; }
+.result p { font-size: 18px; margin: 0 0 12px; color: var(--green); }
+.result strong { font-size: clamp(2.4rem, 6vw, 5.8rem); font-weight: 700; line-height: .95; letter-spacing: -.07em; }
+.project-footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding: 28px 0 45px; color: var(--muted); }
+@media (max-width: 700px) {
+  .project-header { height: 74px; }
+  .hero { padding: 70px 0; }
+  .hero h1 { font-size: clamp(3rem, 15vw, 5rem); }
+  .lede { font-size: 21px; }
+  .project-grid { display: block; padding: 65px 0; }
+  .project-meta { margin-top: 55px; }
+  .result { margin-bottom: 65px; padding: 40px 28px; }
+  .project-footer { display: block; }
+  .project-footer a { display: block; margin-top: 14px; }
+}
